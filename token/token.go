@@ -22,6 +22,9 @@ const (
 	// ASSIGN and PLUS Math operators
 	ASSIGN = "="
 	PLUS   = "+"
+	MINUS  = "-"
+	MULT   = "*"
+	DIV    = "/"
 
 	// COMMA and SEMICOLON Delimiters
 	COMMA     = ","
