@@ -17,6 +17,7 @@ const (
 	// IDENT and INT
 	IDENT = "IDENT" // Vars name: x, y, some, result
 	INT   = "INT"   // Numbers: 1, 2, 100
+	FLOAT = "FLOAT" // Floating-point numbers: 1.0, 2.5, 100.0
 
 	// ASSIGN and PLUS Math operators
 	ASSIGN = "="
