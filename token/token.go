@@ -25,6 +25,7 @@ const (
 	MINUS  = "-"
 	MULT   = "*"
 	DIV    = "/"
+	Equal  = "=="
 
 	// COMMA and SEMICOLON Delimiters
 	COMMA     = ","
