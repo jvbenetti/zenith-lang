@@ -57,3 +57,10 @@ var keywords = map[string]TokenType{
 	"int32": TYPE_INT32,
 	"float": TYPE_FLOAT,
 }
+
+func LookupIdent(ident string) TokenType {
+	if tok, ok := keywords[ident]; ok {
+		return tok
+	}
+	return IDENT
+}
