@@ -33,6 +33,8 @@ const (
 	RPAREN    = ")"
 	LBRACE    = "{"
 	RBRACE    = "}"
+	LSQUARE   = "["
+	RSQUARE   = "]"
 
 	// FUNCTION and LET Keywords
 	FUNCTION = "FUNCTION"
