@@ -47,3 +47,13 @@ const (
 	TYPE_INT32 = "int32"
 	TYPE_FLOAT = "float"
 )
+
+// keywords dict to diference var to keywords
+var keywords = map[string]TokenType{
+	"fn":    FUNCTION,
+	"let":   LET,
+	"int8":  TYPE_INT8,
+	"int16": TYPE_INT16,
+	"int32": TYPE_INT32,
+	"float": TYPE_FLOAT,
+}
