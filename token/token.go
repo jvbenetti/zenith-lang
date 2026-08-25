@@ -45,6 +45,7 @@ const (
 	TYPE_INT8  = "int8"
 	TYPE_INT16 = "int16"
 	TYPE_INT32 = "int32"
+	TYPE_INT64 = "int64"
 	TYPE_FLOAT = "float"
 )
 
