@@ -56,6 +56,7 @@ var keywords = map[string]TokenType{
 	"int8":  TYPE_INT8,
 	"int16": TYPE_INT16,
 	"int32": TYPE_INT32,
+	"int34": TYPE_INT64,
 	"float": TYPE_FLOAT,
 }
 
