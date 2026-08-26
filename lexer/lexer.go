@@ -9,3 +9,10 @@ type Lexer struct {
 	readPosition int  // Next read position (actually position + 1)
 	ch           byte // Actually ch in analyzes
 }
+
+// New init the Lexer and read the first char
+func New(input string) *Lexer {
+	l := &Lexer{input: input}
+	l.readChar()
+	return l
+}
