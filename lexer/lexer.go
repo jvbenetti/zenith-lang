@@ -16,3 +16,32 @@ func New(input string) *Lexer {
 	l.readChar()
 	return l
 }
+
+// NextToken analyzes actually char and return token
+func (l *Lexer) NextToken() token.Token {
+	var tok token.Token
+
+	// Jump whitespaces
+	l.skipWhitespace()
+
+	switch l.ch {
+	case '=':
+		tok = newToken(token.ASSIGN, l.ch)
+	case '+':
+		tok = newToken(token.PLUS, l.ch)
+	case '-':
+		tok = newToken(token.MINUS, l.ch)
+	case '(':
+		tok = newToken(token.LPAREN, l.ch)
+	case ')':
+		tok = newToken(token.RPAREN, l.ch)
+	case 0:
+		tok.Literal = ""
+		tok.Type = token.EOF
+	default:
+		// Enter logic to read letters
+		tok = newToken(token.ILLEGAL, l.ch)
+	}
+	l.readChar() // Go to next char before return token
+	return tok
+}
