@@ -45,3 +45,8 @@ func (l *Lexer) NextToken() token.Token {
 	l.readChar() // Go to next char before return token
 	return tok
 }
+
+// newToken is a auxiliary func to create token faster
+func newToken(tokenType token.TokenType, ch byte) token.Token {
+	return token.Token{Type: tokenType, Literal: string(ch)}
+}
