@@ -20,7 +20,7 @@ func New(input string) *Lexer {
 // readChar next pointer
 func (l *Lexer) readChar() {
 	if l.readPosition >= len(l.input) {
-		l.ch = 0 // 0 é o código ASCII para "NUL" (fim do arquivo)
+		l.ch = 0 // 0 (end of file)
 	} else {
 		l.ch = l.input[l.readPosition]
 	}
