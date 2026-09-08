@@ -9,6 +9,7 @@ func TestNextToken(t *testing.T) {
 	input := `
 		let x int64 = 10000;
 		= + - ( ) { }
+		10 == 10;
 	`
 
 	// Wait that Lexer can read the tokens
