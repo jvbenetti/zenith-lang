@@ -17,6 +17,17 @@ func New(input string) *Lexer {
 	return l
 }
 
+// readChar next pointer
+func (l *Lexer) readChar() {
+	if l.readPosition >= len(l.input) {
+		l.ch = 0 // 0 é o código ASCII para "NUL" (fim do arquivo)
+	} else {
+		l.ch = l.input[l.readPosition]
+	}
+	l.position = l.readPosition
+	l.readPosition += 1
+}
+
 // NextToken analyzes actually char and return token
 func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
