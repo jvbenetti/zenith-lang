@@ -104,3 +104,8 @@ func (l *Lexer) readNumber() string {
 	}
 	return l.input[position:l.position]
 }
+
+// isDigit check if is number between 0 and 9
+func isDigit(ch byte) bool {
+	return '0' <= ch && ch <= '9'
+}
