@@ -95,3 +95,12 @@ func (l *Lexer) readIdentifier() string {
 func isLetter(ch byte) bool {
 	return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_' || ('0' <= ch && ch <= '9')
 }
+
+// readNumber moving forward until find something that not is numbers
+func (l *Lexer) readNumber() string {
+	position := l.position
+	for isDigit(l.ch) {
+		l.readChar()
+	}
+	return l.input[position:l.position]
+}
