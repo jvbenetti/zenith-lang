@@ -93,7 +93,7 @@ func (l *Lexer) readIdentifier() string {
 
 // isLetter defined what zenith understand as a letter
 func isLetter(ch byte) bool {
-	return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_' || ('0' <= ch && ch <= '9')
+	return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_'
 }
 
 // readNumber moving forward until find something that not is numbers
