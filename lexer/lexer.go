@@ -85,9 +85,12 @@ func (l *Lexer) skipWhitespace() {
 // readIdentifier moving forward reading letters until find simbols
 func (l *Lexer) readIdentifier() string {
 	position := l.position
-	for isLetter(l.ch) {
+
+	// While is letter or number continue reading
+	for isLetter(l.ch) || isDigit(l.ch) {
 		l.readChar()
 	}
+
 	return l.input[position:l.position]
 }
 
