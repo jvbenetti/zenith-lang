@@ -51,7 +51,20 @@ func (l *Lexer) NextToken() token.Token {
 		tok.Type = token.EOF
 	default:
 		// Enter logic to read letters
-		tok = newToken(token.ILLEGAL, l.ch)
+		if isLetter(l.ch) {
+			// Read all world
+			tok.Literal = l.readIdentifier()
+			// Look if is a keyword or a normal world
+			tok.Type = token.LookupIdent(tok.Literal)
+			return tok
+		} else if isDigit(l.ch) {
+			// Read a int number
+			tok.Type = token.INT
+			tok.Literal = l.readNumber()
+			return tok
+		} else {
+			tok = newToken(token.ILLEGAL, l.ch)
+		}
 	}
 	l.readChar() // Go to next char before return token
 	return tok
