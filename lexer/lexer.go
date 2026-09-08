@@ -90,3 +90,8 @@ func (l *Lexer) readIdentifier() string {
 	}
 	return l.input[position:l.position]
 }
+
+// isLetter defined what zenith understand as a letter
+func isLetter(ch byte) bool {
+	return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_' || ('0' <= ch && ch <= '9')
+}
