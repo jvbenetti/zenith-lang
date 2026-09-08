@@ -81,3 +81,12 @@ func (l *Lexer) skipWhitespace() {
 		l.readChar()
 	}
 }
+
+// readIdentifier moving forward reading letters until find simbols
+func (l *Lexer) readIdentifier() string {
+	position := l.position
+	for isLetter(l.ch) {
+		l.readChar()
+	}
+	return l.input[position:l.position]
+}
