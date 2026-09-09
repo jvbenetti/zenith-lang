@@ -23,7 +23,7 @@ func TestNextToken(t *testing.T) {
 		{token.ASSIGN, "="},
 		{token.INT, "10000"},
 		{token.SEMICOLON, ";"},
-		// A segunda linha começa aqui:
+
 		{token.ASSIGN, "="},
 		{token.PLUS, "+"},
 		{token.MINUS, "-"},
@@ -31,6 +31,12 @@ func TestNextToken(t *testing.T) {
 		{token.RPAREN, ")"},
 		{token.LBRACE, "{"},
 		{token.RBRACE, "}"},
+
+		{token.INT, "10"},
+		{token.EQUAL, "=="},
+		{token.INT, "10"},
+		{token.SEMICOLON, ";"},
+
 		{token.EOF, ""},
 	}
 
