@@ -1,5 +1,28 @@
-### GET request to example server
-GET https://examples.http-client.intellij.net/get
-    ?generated-in=GoLand
+### ==========================================
+### 1. Consulta de endereço por CEP (ViaCEP)
+### ==========================================
 
-###
+### Consulta do CEP da Praça da Sé (Exemplo oficial)
+GET https://viacep.com.br/ws/01001000/json/
+Accept: application/json
+
+### Consulta do seu CEP (Substitua os zeros pelo seu CEP, sem traços)
+GET https://viacep.com.br/ws/98700000/json/
+Accept: application/json
+
+
+### ==========================================
+### 2. Consulta dados sobre Países (Countries.dev)
+### ==========================================
+
+### Consulta de país pelo código Alpha (Ex: Brasil - BR)
+GET https://countries.dev/alpha/BR
+Accept: application/json
+
+### Consulta de país com filtro de campos (name, capital, currencies)
+GET https://countries.dev/alpha/BR?fields=name,capital,currencies
+Accept: application/json
+
+### Consulta de outro país (Ex: Japão - JP)
+GET https://countries.dev/alpha/JP
+Accept: application/json
